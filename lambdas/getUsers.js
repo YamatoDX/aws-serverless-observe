@@ -8,9 +8,11 @@ exports.handler = async (event) => {
     }
     const { queryStringParameters } = event;
     const { id } = queryStringParameters;
+
     if (!id) {
       throw new Error("id is missing");
     }
+
     if (Number(id) < 0 || Number(id) > 10) {
       throw new Error("invalid id has been entered");
     }
@@ -29,7 +31,8 @@ exports.handler = async (event) => {
 
 function getReturnValue(statusCode = 400, finalData = {}) {
   return {
-    header: {
+    isBase64Encoded: false,
+    headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Methods": "*",
       "Access-Control-Allow-Origin": "*",
