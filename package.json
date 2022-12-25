@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "aws-s3-sync": "^0.1.7"
+  }
+}

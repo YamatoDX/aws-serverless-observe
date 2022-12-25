@@ -59,6 +59,14 @@ provider:
 #    - include-me.js
 #    - include-me-dir/**
 
+plugins:
+  - serverless-s3-sync
+
+custom:
+  s3Sync:
+    - bucketName: piyal-demo-bucket-789
+      localDir: UploadData
+
 functions:
   hello:
     handler: handler.hello
