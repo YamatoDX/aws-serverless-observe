@@ -1,7 +1,6 @@
 const axios = require("axios");
 
 exports.handler = async (event) => {
-  console.log("event is", event);
   try {
     if (event.httpMethod !== "GET") {
       throw new Error("Must be a GET Request");
