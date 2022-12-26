@@ -21,14 +21,14 @@ custom:
 
 functions:
   getUsers:
-    handler: lambdas/getUsers.handler
+    handler: lambdas/getData.getUsers
     events:
       - http:
           path: /getUsers
           method: GET
           cors: true
   getPosts:
-    handler: lambdas/getPosts.handler
+    handler: lambdas/getData.getPosts
     events:
       - http:
           path: /getPosts
