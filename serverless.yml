@@ -23,6 +23,13 @@ functions:
           path: /getUsers
           method: GET
           cors: true
+  getPosts:
+    handler: lambdas/getPosts.handler
+    events:
+      - http:
+          path: /getPosts
+          method: GET
+          cors: true
 
 resources:
   Resources:
